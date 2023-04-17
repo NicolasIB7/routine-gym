@@ -1,14 +1,16 @@
 import React from "react";
+import style from "./SearchBar.module.css"
 
 function SearchBar(props) {
   return (
-    <form>
+    <form className={style.search}>
       <input
         type='search'
         onChange={props.handleChange}
         value={props.searchInput}
+        className={style.input}
       />
-      <button type='submit' onClick={props.handleSubmit}>
+      <button type='submit' onClick={props.handleSubmit} className={style.botonSearch}>
         Search
       </button>
     </form>

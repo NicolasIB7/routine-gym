@@ -1,36 +1,10 @@
-// import React, { useEffect, useState } from "react";
-// import Cards from "../Cards/Cards"
 
-// function Favorites(props) {
-
-//   console.log(props.favoriteExercises)
-
-//     return (
-//         <div>
-//             <h2>Favorite Cards</h2>
-//             {/* <div>
-//                 {favoriteEjercicios?.map((ejercicio) => (
-//                     <Cards
-//                         key={ejercicio.id}
-//                         id={ejercicio.id}
-//                         name={ejercicio.name}
-//                         bodyPart={ejercicio.bodyPart}
-//                         gifUrl={ejercicio.gifUrl}
-//                       equipment={ejercicio.equipment}
-//                       target={ejercicio.target}
-//                       />
-//                 ))}
-//                 </div> */}
-//                 </div>
-//                 )
-//                 }
-
-// export default Favorites;
 
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Cards from "../Cards/Cards";
 import { removeFavoriteExcercise } from "../../Redux/actions";
+import style from "./Favorites.module.css"
 
 function Favorites(props) {
   const favoriteIds = useSelector((state) => state.myFavorites);
@@ -49,7 +23,7 @@ function Favorites(props) {
   return (
     <div>
       <h2>Favorite Cards</h2>
-      <div>
+      <div className={style.container}>
         {favoriteExercises?.map((ejercicio) => (
           <Cards
             key={ejercicio.id}

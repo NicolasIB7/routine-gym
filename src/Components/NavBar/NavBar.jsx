@@ -4,11 +4,11 @@ import style from "./NavBar.module.css";
 
 function NavBar() {
   return (
-    <div className={style.container}>
-      <div>
-        <Link to='/'>Home</Link>
-        <Link to='/favorites'>Favorites</Link>
-        <Link to='/about'>About</Link>
+    <div >
+      <div className={style.container}>
+        <Link to='/' className={style.links}>Home</Link>
+        <Link to='/favorites' className={style.links}>Favorites</Link>
+        <Link to='/about' className={style.links}>About</Link>
       </div>
     </div>
   );

@@ -1,3 +1,50 @@
 .container{
-    border: solid 1px black;
+    background-color: rgba(53, 39, 8, 0.904);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.container:hover{
+    transform:translateY(-2%)
+}
+
+.nombres{
+    display: flex;
+    color: rgb(173, 201, 178);
+    font: italic small-caps bold 19px/2 cursive;
+}
+
+
+
+.imagenes{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.delete{
+    display: flex;
+    
+    align-self: center;
+background-color: rgb(128, 25, 25);
+height: 40px;
+width: fit-content;
+border-radius: 5px;
+margin-top: 10px;
+font: italic small-caps bold 14px/2 cursive;
+border: 0.5px solid black;
+}
+
+.delete:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+
+p{
+    display: flex;
+    font-size: 23px;
 }

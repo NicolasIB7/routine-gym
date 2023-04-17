@@ -13,11 +13,11 @@ function Cards(props) {
   return (
     <div className={style.container}>
       <h3>{props.name}</h3>
-      <img src={props.gifUrl} alt='ejercicio' />
+      <img src={props.gifUrl} alt='ejercicio' className={style.imagenes} />
       <p>Body part: {props.bodyPart}</p>
       <p>Equipment: {props.equipment}</p>
-      <button onClick={handleFavoriteClick}>
-        {props.isFavorite ? "Remove from Favorites" : "Add to Favorites"}
+      <button onClick={handleFavoriteClick} className={style.delete} >
+        {props.isFavorite ? "Remove" : "Add to Favorites"}
       </button>
     </div>
   );
