@@ -1,6 +1,8 @@
 .ul{
 
     display: inline-block;
+    margin-left: 35%;
+    margin-top: 5%;
 
 }
 
@@ -14,7 +16,7 @@
 }
 
 .button:hover{
-    background-color: #ad5617;
+    background-color: #0080ff;
     transform: scale(1.2);
     cursor: pointer;
 }
@@ -25,6 +27,7 @@
     font-size: 15px;
     padding: 10px;
     border-radius: 8px;
-    border: 2px solid black;
-    background-color: rgb(59, 173, 59);
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(12, 24, 49, 0.575);
+    color:beige
 }

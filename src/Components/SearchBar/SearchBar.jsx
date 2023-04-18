@@ -9,6 +9,7 @@ function SearchBar(props) {
         onChange={props.handleChange}
         value={props.searchInput}
         className={style.input}
+        placeholder="ejercicio..."
       />
       <button type='submit' onClick={props.handleSubmit} className={style.botonSearch}>
         Search

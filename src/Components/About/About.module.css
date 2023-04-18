@@ -1,0 +1,15 @@
+.descripcion{
+    color: beige;
+    margin-top: 20%;
+}
+
+.container{
+    display: flex;
+
+} 
+
+.imagen{
+    scale: 0.6;
+    margin-bottom: 15%;
+    border-radius: 5%;
+}

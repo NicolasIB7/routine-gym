@@ -1,5 +1,5 @@
 .container{
-    background-color: rgba(53, 39, 8, 0.904);
+    background-color: rgba(12, 24, 49, 0.575);
     padding: 10px;
     border-radius: 10px;
     display: flex;
@@ -8,17 +8,25 @@
 }
 
 
-
-.container:hover{
-    transform:translateY(-2%)
-}
-
 .nombres{
     display: flex;
     color: rgb(173, 201, 178);
-    font: italic small-caps bold 19px/2 cursive;
+    
 }
 
+.name{
+    font-size: 25px;
+    color: white;
+
+}
+.name:first-letter {
+    text-transform: uppercase;
+}
+
+
+.p{
+    color: beige;
+}
 
 
 .imagenes{
@@ -30,7 +38,7 @@
     display: flex;
     
     align-self: center;
-background-color: rgb(128, 25, 25);
+background-color: rgba(165, 179, 34, 0.616);
 height: 40px;
 width: fit-content;
 border-radius: 5px;
@@ -42,6 +50,7 @@ border: 0.5px solid black;
 .delete:hover{
     scale: 1.1;
     cursor: pointer;
+    background-color: rgba(165, 179, 34, 0.932);
 }
 
 p{
