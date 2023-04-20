@@ -6,3 +6,22 @@
     width: 80%;
     margin: auto;
 }
+
+.divfiltrados{
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50%;
+    display: flex;
+}
+
+.filtrados{
+    margin-left: 70%;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 7%;
+    background-color: rgba(38, 74, 150, 0.575);
+    font-weight: bold;
+    margin-bottom: 5%;
+    scale: 1.2;
+    }

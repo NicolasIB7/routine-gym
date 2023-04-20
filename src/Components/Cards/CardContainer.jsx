@@ -8,6 +8,7 @@ import {
   excercisesByName,
   favoriteExcercise,
   removeFavoriteExcercise,
+  filterExcercise
 } from "../../Redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -61,6 +62,11 @@ function CardContainer(props) {
   const nextExcercises=(i)=>{
     (currentPage!==i) && paginado(currentPage+1)}
 
+    const handleFilter=(e)=>{
+      e.preventDefault();
+      dispatch(filterExcercise(e.target.value))
+    }
+
   return (
     <div>
       <SearchBar
@@ -68,25 +74,39 @@ function CardContainer(props) {
         searchInput={searchInput}
         handleSubmit={handleSubmit}
       />
+<div className={style.divFiltrados}>
+  <p style={{color:"white", fontSize:18, marginLeft: "69%"}} >Filtre por parte del cuerpo:</p>
+  <select name="FILTER" onChange={handleFilter} className={style.filtrados} placeholder="filter">
+    <option value="all">Todos</option>
+    {[...new Set(ejercicios.map((exercise) => exercise.bodyPart))].map((bodyPart) => (
+      <option key={bodyPart} value={bodyPart}>
+        {bodyPart}
+      </option>
+    ))}
+  </select>
+</div>
+
 
       <div className={style.container}>
-        {currentExcercises &&
-          currentExcercises.map((response) => {
-            return (
-              <Cards
-                id={response.id}
-                name={response.name}
-                bodyPart={response.bodyPart}
-                gifUrl={response.gifUrl}
-                equipment={response.equipment}
-                target={response.target}
-                isFavorite={favoritos?.includes(response.id)}
-                onAddToFavorites={handleAddToFavorites}
-                onRemoveFromFavorites={handleRemoveToFavorites}
-              />
-            );
-          })}
-      </div>
+  {currentExcercises && currentExcercises.length > 0 ? (
+    currentExcercises.map((response) => (
+      <Cards
+        id={response.id}
+        name={response.name}
+        bodyPart={response.bodyPart}
+        gifUrl={response.gifUrl}
+        equipment={response.equipment}
+        target={response.target}
+        isFavorite={favoritos?.includes(response.id)}
+        onAddToFavorites={handleAddToFavorites}
+        onRemoveFromFavorites={handleRemoveToFavorites}
+      />
+    ))
+  ) : (
+    <div style={{color:"white", fontSize:40,width:"fit-content", marginLeft:60}}>No se encontraron ejercicios relacionados con tu búsqueda. </div>
+  )}
+</div>
+
       <div>
         <Paginate
             excercisePerPage={excercisePerPage}
