@@ -3,19 +3,18 @@ import {
   GET_BY_NAME,
   FAVORITES,
   REMOVE_FAVORITE_EXCERCISE,
-  FILTER
+  FILTER,
 } from "./actions";
 
 const initialState = {
   myFavorites: [],
   allCharacter: [],
-  copia:[],
-
+  copia: [],
 };
 
 function reducer(state = initialState, action) {
   if (action.type === GET_ALL) {
-    return { ...state, allCharacter: action.payload, copia:action.payload };
+    return { ...state, allCharacter: action.payload, copia: action.payload };
   }
   if (action.type === GET_BY_NAME) {
     return { ...state, allCharacter: action.payload };
@@ -33,11 +32,13 @@ function reducer(state = initialState, action) {
       ),
     };
 
-    if(action.type===FILTER){
-      const ejercicios=state.copia;
-      const filterEjercicios = action.payload==="all"? ejercicios: ejercicios.filter(item=>item.bodyPart===action.payload)
-      return{...state,allCharacter:filterEjercicios}
-    }
-  else return { ...state };
+  if (action.type === FILTER) {
+    const ejercicios = state.copia;
+    const filterEjercicios =
+      action.payload === "all"
+        ? ejercicios
+        : ejercicios.filter((item) => item.bodyPart === action.payload);
+    return { ...state, allCharacter: filterEjercicios };
+  } else return { ...state };
 }
 export default reducer;

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./SearchBar.module.css"
+import style from "./SearchBar.module.css";
 
 function SearchBar(props) {
   return (
@@ -9,9 +9,12 @@ function SearchBar(props) {
         onChange={props.handleChange}
         value={props.searchInput}
         className={style.input}
-        placeholder="ejercicio..."
+        placeholder='ejercicio...'
       />
-      <button type='submit' onClick={props.handleSubmit} className={style.botonSearch}>
+      <button
+        type='submit'
+        onClick={props.handleSubmit}
+        className={style.botonSearch}>
         Search
       </button>
     </form>

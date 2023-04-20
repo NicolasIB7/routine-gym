@@ -16,7 +16,7 @@ function Cards(props) {
       <img src={props.gifUrl} alt='ejercicio' className={style.imagenes} />
       <p className={style.p}>Body part: {props.bodyPart}</p>
       <p className={style.p}>Equipment: {props.equipment}</p>
-      <button onClick={handleFavoriteClick} className={style.delete} >
+      <button onClick={handleFavoriteClick} className={style.delete}>
         {props.isFavorite ? "Remove" : "Add to Favorites"}
       </button>
     </div>
