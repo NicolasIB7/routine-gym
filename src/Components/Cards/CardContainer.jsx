@@ -73,6 +73,7 @@ function CardContainer(props) {
         handleChange={handleChange}
         searchInput={searchInput}
         handleSubmit={handleSubmit}
+        className={style.searchInput}
       />
 <div className={style.divFiltrados}>
   <p style={{color:"white", fontSize:18, marginLeft: "69%"}} >Filtre por parte del cuerpo:</p>
@@ -107,7 +108,7 @@ function CardContainer(props) {
   )}
 </div>
 
-      <div>
+      <div className={style.paginado}>
         <Paginate
             excercisePerPage={excercisePerPage}
             ejercicios={ejercicios.length}

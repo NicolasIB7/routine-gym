@@ -24,7 +24,7 @@ function Favorites(props) {
     <div>
       <h2>Favorite Cards</h2>
       <div className={style.container}>
-        {favoriteExercises?.map((ejercicio) => (
+        {favoriteExercises.length>0 ?  (favoriteExercises?.map((ejercicio) => (
           <Cards
             key={ejercicio.id}
             id={ejercicio.id}
@@ -36,7 +36,14 @@ function Favorites(props) {
             isFavorite={true}
             onRemoveFromFavorites={handleRemoveFromFavorites}
           />
-        ))}
+        )))
+          :
+
+          (<div style={{color:"white", fontSize:30,width:"fit-content", marginLeft:60}}>No tienes ejercicos favoritos</div>)
+        
+        }
+
+
       </div>
     </div>
   );

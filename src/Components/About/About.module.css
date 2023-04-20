@@ -1,6 +1,6 @@
 .descripcion{
     color: beige;
-    margin-top: 20%;
+    margin-top: 15%;
 }
 
 .container{
@@ -9,7 +9,43 @@
 } 
 
 .imagen{
-    scale: 0.6;
-    margin-bottom: 15%;
+    /* scale: 0.6; */
+
     border-radius: 5%;
+    height: 700px;
+    width: 1000px;
+    margin-top: 8%;
+    margin-left: 15%;
+    margin-right: 80px;
 }
+
+@media only screen and (max-width:1100px) {
+    .container{
+       display: flex;
+       flex-direction: column;
+    }
+    .descripcion{
+        font-size: 25px;
+    }
+    .imagen{
+        height: 500px;
+        width: 400px;
+    }
+          
+    }
+    
+    @media only screen and (max-width:600px) {
+        .container{
+            display: flex;
+            flex-direction: column;
+         }
+
+         .descripcion{
+            font-size: 20px;
+        }
+        .imagen{
+            height: 400px;
+            width: 300px;
+        }
+    
+    }
